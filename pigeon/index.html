@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pigeon Store</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #000;
+        color: white;
+        scroll-behavior: smooth;
+    }
+
+    .dotted-bg {
+        background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(8px);
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #aaa;
+        font-weight: 500;
+    }
+
+    nav a.active, nav a:hover {
+        color: white;
+        border-bottom: 2px solid white;
+        padding-bottom: 3px;
+    }
+
+    section {
+        padding: 120px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .highlight {
+        background: linear-gradient(90deg, #4a6cf7, #b14cff);
+        padding: 0 8px;
+        border-radius: 8px;
+    }
+
+    .hero p {
+        color: #aaa;
+        margin: 20px 0 40px;
+        font-size: 18px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        transition: opacity 0.2s ease;
+    }
+
+    .btn-light {
+        background: #fff;
+        color: #000;
+    }
+
+    .btn-dark {
+        background: #111;
+        border: 1px solid #333;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.05);
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: background 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    .vanta-bg {
+        height: 500px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🕊 Pigeon Store</div>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero dotted-bg">
+    <h1>Experience <span class="highlight">Security</span><br>in Every Transaction</h1>
+    <p>Pigeon Store is a global marketplace offering 20+ local and international payment methods, unmatched privacy, and a seamless user experience designed for speed, simplicity, and security.</p>
+    <div class="buttons">
+        <a href="#shop" class="btn btn-light">Shop Now →</a>
+        <a href="#categories" class="btn btn-dark">Explore Categories</a>
+    </div>
+</section>
+
+<!-- SHOP SECTION (VANTA) -->
+<section id="shop" class="vanta-bg">
+    Welcome to the Shop — NEW MENU!
+</section>
+
+<!-- CATEGORIES SECTION -->
+<section id="categories" class="dotted-bg">
+    <h2>Shop by Categories</h2>
+    <div class="grid">
+        <div class="card" onclick="window.location.href='checkout.html'">📦 Vanta Menu</div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="dotted-bg">
+    <h2>About Us</h2>
+    <p style="max-width:600px;margin:auto;color:#ccc;font-size:18px;">
+        We don’t scam — we bring pure products to you with full transparency, unmatched quality, and trust in every transaction.
+    </p>
+</section>
+
+<!-- VANTA.JS Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+<script>
+    VANTA.WAVES({
+        el: ".vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x4a6cf7,
+        shininess: 50.00,
+        waveHeight: 20.00,
+        waveSpeed: 1.2
+    })
+</script>
+
+</body>
+</html>
+ 

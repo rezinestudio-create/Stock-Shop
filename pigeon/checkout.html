@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – Pigeon Store</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .checkout-container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: none;
+      background: #111;
+      color: white;
+      font-size: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      background: #4a6cf7;
+      border: none;
+      font-weight: 600;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #3954d8;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-container">
+    <h1>🛒 Checkout</h1>
+
+    <form action="#" method="post">
+      <label for="product">Select Product</label>
+      <select id="product" name="product" required>
+        <option value="vanta">📦 Vanta Menu</option>
+      </select>
+
+      <label for="payment">Select Payment Method</label>
+      <select id="payment" name="payment" required>
+        <option value="cashapp">$OASISClothing (CashApp)</option>
+        <option value="discord_nitro">Discord Nitro</option>
+        <option value="client_phial">Client.phial</option>
+        <option value="server_boost">Server Boost (x1 = $10)</option>
+      </select>
+
+      <label for="discord">Your Discord Username</label>
+      <input type="text" id="discord" name="discord" placeholder="e.g. username#0000" required>
+
+      <button type="submit" class="btn">Complete Order</button>
+    </form>
+
+    <a class="back" href="index.html">← Back to Store</a>
+  </div>
+
+</body>
+</html>
